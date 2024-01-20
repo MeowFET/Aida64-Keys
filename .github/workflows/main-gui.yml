@@ -23,3 +23,8 @@ jobs:
       run: cargo build --workspace --verbose
     - name: Run tests
       run: cargo test --workspace --verbose
+    - name: Upload
+      uses: actions/upload-artifact@v4
+      with:
+        name: keys
+        path: target/debug
